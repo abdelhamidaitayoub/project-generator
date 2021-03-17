@@ -25,10 +25,12 @@ exports.starter = (projectName) => {
   shell.mkdir(projectName);
   const WORK_DIR = path.join(process.cwd(), projectName);
   shell.cd(WORK_DIR);
-  shell.exec('git clone https://github.com/abdelhamidaitayoub/sass-project-starter');
-  shell.mv('-f', './sass-project-starter/*', '.');
-  shell.mv('-f', './sass-project-starter/.gitignore', '.');
-  shell.rm('-rf', './sass-project-starter');
+  shell.exec('git clone https://github.com/abdelhamidaitayoub/parcel-starter');
+  shell.mv('-f', './parcel-starter/*', '.');
+  shell.mv('-f', './parcel-starter/.gitignore', '.');
+  shell.mv('-f', './parcel-starter/.eslintrc', '.');
+  shell.mv('-f', './parcel-starter/.prettierrc', '.');
+  shell.rm('-rf', './parcel-starter');
 
   shell.exec('npm i');
 };
